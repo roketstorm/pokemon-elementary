@@ -38,9 +38,10 @@ class PokemonShowScreen extends WMWidget<IPokemonShowWM> {
                 const SizedBox(height: 16.0),
                 TypeDrawer(pokemon.types as List<dynamic>),
                 const SizedBox(height: 16.0),
-                Expanded(
-                    child: Text(pokemon.description as String,
-                        style: const TextStyle(fontSize: 20.0))),
+                Wrap(children: [
+                  Text(pokemon.description as String,
+                      style: const TextStyle(fontSize: 20.0))
+                ]),
               ],
             );
           } else {
